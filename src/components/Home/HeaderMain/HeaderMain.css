@@ -1,0 +1,8 @@
+
+.jobTitleHeader,.locationHeader,.categoryHeader{
+    border-right:2px solid red!important;
+}
+.searchHeader{
+    background: rgba(255, 255, 254, 0.14)!important;
+    padding: 20px!important;
+}
