@@ -23,7 +23,7 @@ const Navbar = () => {
               <div className="navbar-nav text-white">
                 <Link to="/" className="nav-link text-white">Home</Link>
                 <Link to="/about"  className=" nav-link text-white">About</Link>
-                <Link to="/blogs" className="nav-link text-white">Blogs</Link>
+                <Link to="/userIsAdmin" className="nav-link text-white">Admin</Link>
                 <Link to="/contact" className="nav-link text-white">Contact</Link>
                 <Link to="/postajob" className="nav-link text-white " style={{marginLeft:'150px'}}>Post A Job</Link>
   

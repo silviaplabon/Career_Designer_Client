@@ -11,6 +11,8 @@ import Home from './components/Home/Home/Home';
 import PrivateRoute from './components/shared/PrivateRoute/PrivateRoute';
 import Login from './components/shared/Login/Login'
 import EmployerAccount from './components/PostAJob/EmployerAccount/EmployerAccount';
+import AdminMaker from './components/AdminMaker/AdminMaker';
+import UserIsAdmin from './components/shared/UserIsAdmin/UserIsAdmin';
 
 export const UserContext = createContext();
 export const CartContext = createContext();
@@ -29,9 +31,17 @@ function App() {
            <Route exact path='/login'>
              <Login></Login>
            </Route>
+           <Route exact path='/admin_maker'>
+             <AdminMaker></AdminMaker>
+           </Route>
+           <Route exact path='/userIsAdmin'>
+             <UserIsAdmin></UserIsAdmin>
+           </Route>
+
            <Route exact path='/postajob'>
              <EmployerAccount></EmployerAccount>
            </Route>
+
         </Switch>
       </Router>
       </UserContext.Provider>

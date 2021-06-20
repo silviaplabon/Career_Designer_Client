@@ -14,7 +14,7 @@ const EmployerAccount = () => {
     const [state, setState] = useState();
 
     useEffect(() => {
-        fetch('http://localhost:4200/userIsEmployer?email=' + loggedInUser?.email,
+        fetch('https://rocky-basin-25437.herokuapp.com/userIsEmployer?email='+loggedInUser?.email,
             {
                 method: 'GET',
                 headers: {
@@ -26,6 +26,7 @@ const EmployerAccount = () => {
             .then(data => {
                 if (data.length > 0) {
                     setState(true)
+                    alert(data)
                 }
                 else {
                     setState(false)
