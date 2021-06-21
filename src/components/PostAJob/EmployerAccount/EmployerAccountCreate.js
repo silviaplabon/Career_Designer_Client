@@ -52,6 +52,9 @@ const EmployerAccountCreate = ({ modalIsOpen, closeModal }) => {
     }
     
     return (
+        <div className="">
+            <Navbar></Navbar>
+    
         <div className="container w-100">
                 <div className="row ">
                     <h5 className="text-center w-100">Dear {loggedInUser.displayName}</h5>
@@ -81,7 +84,8 @@ const EmployerAccountCreate = ({ modalIsOpen, closeModal }) => {
                         </div>
                     </div>
                 </div>
-        </div>
+        </div> 
+           </div>
 
     );
 };
