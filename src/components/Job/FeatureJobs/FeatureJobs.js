@@ -12,7 +12,7 @@ const FeatureJobs = ({state}) => {
 
 
     useEffect(() => {
-        fetch(' http://localhost:4200/allJobList')
+        fetch('https://rocky-basin-25437.herokuapp.com/allJobList')
             .then(res => res.json())
             .then(data => {
                 setJobList(data.reverse());
@@ -21,7 +21,7 @@ const FeatureJobs = ({state}) => {
     useEffect(() => {
         {
             searchValue[0]?.category &&
-                fetch(`http://localhost:4200/filterJobData/${searchValue[0].category}/${searchValue[0].title}/${searchValue[0].location}`)
+                fetch(`https://rocky-basin-25437.herokuapp.com/filterJobData/${searchValue[0].category}/${searchValue[0].title}/${searchValue[0].location}`)
                     .then(res => res.json())
                     .then(data => {
                         setFilterJob(data);

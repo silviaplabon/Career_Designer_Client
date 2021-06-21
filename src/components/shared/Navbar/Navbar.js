@@ -23,8 +23,8 @@ const Navbar = () => {
               <div className="navbar-nav text-white">
                 <Link to="/" className="nav-link text-white">Home</Link>
                 <Link to="/browsejob"  className=" nav-link text-white">Job</Link>
-                {/* <Link to="/admin_maker" className="nav-link text-white">Admin</Link>
-                <Link to="/contact" className="nav-link text-white">Contact</Link> */}
+                {/* <Link to="/admin_maker" className="nav-link text-white">Admin</Link> */}
+                <Link to="/jobApplier" className="nav-link text-white">Job Applier</Link>
                 <Link to="/postajob" className="nav-link text-white " style={{backgroundColor:'orange',borderRadius:'0.70rem'}}>Post A Job</Link>
   
                             {(loggedInUser.email) ? <button onClick={()=>setLoggedInUser({})} className="btn text-white  buttonStyleHeader   fw-bold mb-1  " style={{ color: 'white' }}>Logout</button> :

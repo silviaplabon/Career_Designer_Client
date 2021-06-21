@@ -15,6 +15,8 @@ import AdminMaker from './components/Admin/AdminMaker/AdminMaker';
 import UserIsAdmin from './components/shared/UserIsAdmin/UserIsAdmin';
 import FeatureJobs from './components/Job/FeatureJobs/FeatureJobs';
 import UserSidebar from './components/shared/UserSidebar/UserSidebar';
+import JobApplier from './components/Job/JobApplier/JobApplier';
+import Candidator from './components/Admin/Candidator/Candidator';
 
 
 export const UserContext = createContext();
@@ -36,18 +38,28 @@ function App() {
             <Route exact path='/login'>
               <Login></Login>
             </Route>
+            {/* Admin route */}
             <Route exact path='/admin_maker'>
               <AdminMaker></AdminMaker>
             </Route>
             <Route exact path='/userIsAdmin'>
               <UserIsAdmin></UserIsAdmin>
             </Route>
+            <Route exact path='/candidator'>
+              <Candidator></Candidator>
+            </Route>
+            {/* Admin Route */}
             <Route exact path='/postajob'>
               <EmployerAccount></EmployerAccount>
             </Route>
             <Route exact path='/user'>
               <UserSidebar></UserSidebar>
             </Route>
+            <Route exact path='/jobApplier'>
+              <JobApplier></JobApplier>
+            </Route>
+
+
 
 
           </Switch>

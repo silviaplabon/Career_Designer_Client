@@ -13,7 +13,7 @@ const AdminMaker = () => {
     const adminData = {
       email: data.email,
     };
-    const url = `http://localhost:4200/newAdminMaker`;
+    const url = `https://rocky-basin-25437.herokuapp.com/newAdminMaker`;
     fetch(url, {
       method: 'POST',
       headers: {

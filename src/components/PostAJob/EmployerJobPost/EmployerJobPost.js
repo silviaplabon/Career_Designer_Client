@@ -22,7 +22,7 @@ const EmployerJobPost = () => {
             deadline:data.deadline
         };
         console.log(jobData)
-        fetch('http://localhost:4200/employer_adding_a_job', {
+        fetch('https://rocky-basin-25437.herokuapp.com/employer_adding_a_job', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

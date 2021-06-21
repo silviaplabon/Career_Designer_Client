@@ -23,7 +23,7 @@ const HeaderMain = () => {
         }
     }
     const searchByJobData = (jobData) => {
-        fetch(`http://localhost:4200/searchJobData/${jobData.category}/${jobData.title}/${jobData.location}`)
+        fetch(`https://rocky-basin-25437.herokuapp.com/searchJobData/${jobData.category}/${jobData.title}/${jobData.location}`)
             .then(res => res.json())
             .then(data => {
                 setSearchValue(data);

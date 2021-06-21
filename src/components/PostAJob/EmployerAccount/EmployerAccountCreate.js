@@ -36,7 +36,7 @@ const EmployerAccountCreate = ({ modalIsOpen, closeModal }) => {
             type: serviceType
         };
 
-        fetch('http://localhost:4200/adding_a_employer', {
+        fetch('https://rocky-basin-25437.herokuapp.com/adding_a_employer', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

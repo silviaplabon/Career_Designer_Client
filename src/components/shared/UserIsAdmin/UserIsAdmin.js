@@ -6,7 +6,7 @@ import { UserContext } from '../../../App';
 const UserIsAdmin = () => {    
     const [loggedInUser,setLoggedInUser]=useContext(UserContext);
     useEffect(() => {
-        fetch(' https://sleepy-plains-42535.herokuapp.com/userIsAdmin?email=' + loggedInUser?.email)
+        fetch('https://rocky-basin-25437.herokuapp.com/userIsAdmin?email=' + loggedInUser?.email)
             .then(res => res.json())
             .then(data => {
                 if (data) {

@@ -23,8 +23,11 @@ const UserSidebar = () => {
                 </li>
                 <li>
                     <Link to="/postajob" className="nav-link text-white " style={{ backgroundColor: 'orange', borderRadius: '0.70rem' }}>Post A Job</Link>
-
                 </li>
+                <li>
+                    <Link to="/postajob" className="nav-link text-white " style={{ backgroundColor: 'orange', borderRadius: '0.70rem' }}>Post A Job</Link>
+                </li>
+
                 <li>
                     {(loggedInUser.email) ? <button onClick={() => setLoggedInUser({})} className="btn text-white  buttonStyleHeader   fw-bold mb-1  " style={{ color: 'white' }}>Logout</button> :
                         <Link to="/login" className="btn   text-white buttonStyleHeader buttonColor fw-bold">Login</Link>
