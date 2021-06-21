@@ -16,7 +16,6 @@ const UserIsAdmin = () => {
                         user.admin = true;
                         setLoggedInUser(user);
                     }
-
                 }
                 else {
                 }
@@ -24,12 +23,7 @@ const UserIsAdmin = () => {
     }, [loggedInUser.email])
 
     return (
-        <div>
-            {
-                loggedInUser.admin==true &&<p>silvia</p>
-            }
-            
-        </div>
+        <></>
     );
 };
 

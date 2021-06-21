@@ -16,7 +16,8 @@ import UserIsAdmin from './components/shared/UserIsAdmin/UserIsAdmin';
 import FeatureJobs from './components/Job/FeatureJobs/FeatureJobs';
 import UserSidebar from './components/shared/UserSidebar/UserSidebar';
 import JobApplier from './components/Job/JobApplier/JobApplier';
-import Candidator from './components/Admin/Candidator/Candidator';
+import Candidate from './components/Admin/Candidate/Candidate';
+import PendingJob from './components/Admin/PendingJob/PendingJob';
 
 
 export const UserContext = createContext();
@@ -30,7 +31,7 @@ function App() {
     <UserContext.Provider value={[loggedInUser, setloggedInUser]}>
       <SearchContext.Provider value={[searchValue, setSearchValue]}>
         <Router>
-          <Navbar></Navbar>
+          <UserIsAdmin></UserIsAdmin>
           <Switch>
             <Route exact path="/">
               <Home />
@@ -39,29 +40,27 @@ function App() {
               <Login></Login>
             </Route>
             {/* Admin route */}
-            <Route exact path='/admin_maker'>
+            <PrivateRoute exact path='/admin_maker'>
               <AdminMaker></AdminMaker>
-            </Route>
-            <Route exact path='/userIsAdmin'>
-              <UserIsAdmin></UserIsAdmin>
-            </Route>
-            <Route exact path='/candidator'>
-              <Candidator></Candidator>
-            </Route>
+            </PrivateRoute>
+
+            <PrivateRoute exact path='/candidator'>
+              <Candidate></Candidate>
+            </PrivateRoute>
+            <PrivateRoute exact path='/pendingajob'>
+              <PendingJob></PendingJob>
+            </PrivateRoute>
+
             {/* Admin Route */}
-            <Route exact path='/postajob'>
+            <PrivateRoute exact path='/postajob'>
               <EmployerAccount></EmployerAccount>
-            </Route>
+            </PrivateRoute>
             <Route exact path='/user'>
               <UserSidebar></UserSidebar>
             </Route>
-            <Route exact path='/jobApplier'>
+            <PrivateRoute exact path='/jobApplier'>
               <JobApplier></JobApplier>
-            </Route>
-
-
-
-
+            </PrivateRoute>
           </Switch>
         </Router>
       </SearchContext.Provider>

@@ -11,6 +11,7 @@ import { UserContext } from '../../../App';
   
 const Navbar = () => {
   const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+  console.log(loggedInUser)
     return (
       <div className="" style={{backgroundColor:'#0A1215'}}>
         <nav className="navbar navbar-expand-sm navbar-light   navbarDesign container pt-5">
@@ -22,9 +23,10 @@ const Navbar = () => {
             <div className="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
               <div className="navbar-nav text-white">
                 <Link to="/" className="nav-link text-white">Home</Link>
-                <Link to="/browsejob"  className=" nav-link text-white">Job</Link>
-                {/* <Link to="/admin_maker" className="nav-link text-white">Admin</Link> */}
-                <Link to="/jobApplier" className="nav-link text-white">Job Applier</Link>
+                {/* <Link to="/browsejob"  className=" nav-link text-white">Job</Link> */}
+                
+                {loggedInUser.admin==true && <Link to="/candidator" className="nav-link text-white">Admin</Link>}
+                <Link to="/jobApplier" className="nav-link text-white">Applier Profile</Link>
                 <Link to="/postajob" className="nav-link text-white " style={{backgroundColor:'orange',borderRadius:'0.70rem'}}>Post A Job</Link>
   
                             {(loggedInUser.email) ? <button onClick={()=>setLoggedInUser({})} className="btn text-white  buttonStyleHeader   fw-bold mb-1  " style={{ color: 'white' }}>Logout</button> :

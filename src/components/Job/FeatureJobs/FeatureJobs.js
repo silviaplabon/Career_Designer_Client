@@ -2,12 +2,19 @@ import React, { useContext, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { SearchContext, UserContext } from '../../../App';
 import JobShow from '../JobShow/JobShow';
-const FeatureJobs = ({state}) => {
+import ReactPaginate from "react-paginate";
+import './FeatureJobs.css'
+
+const FeatureJobs = () => {
 
     const [searchValue, setSearchValue] = useContext(SearchContext);
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const [jobList, setJobList] = useState([])
-    const [filterJob, setFilterJob] = useState([])
+    const [filterJob, setFilterJob] = useState([]);
+    const [searchAndFilter,setSearchAndFilter]=useState([]);
+    const [pageNumber, setPageNumber] = useState(0);
+    const jobsPerPage = 25;
+    const pagesVisited = pageNumber * jobsPerPage;
     let value;
 
 
@@ -24,34 +31,40 @@ const FeatureJobs = ({state}) => {
                 fetch(`https://rocky-basin-25437.herokuapp.com/filterJobData/${searchValue[0].category}/${searchValue[0].title}/${searchValue[0].location}`)
                     .then(res => res.json())
                     .then(data => {
-                        setFilterJob(data);
+                        const  newData = searchValue.concat(data); 
+                        setJobList(newData);
                     })
         }
     }, [searchValue?.length])
    
+    let i = 0;
+ 
+    const pageCount = Math.ceil(jobList.length / jobsPerPage);
+    const changePage = ({ selected }) => {
+        setPageNumber(selected);
+    };
 
     return (
         <>
             <div className="container">
-                {
-                    state == true &&
-                    <div className="row row-cols-1 row-cols-sm-2 mt-5 ">
+               
+                    <div className="row row-cols-1 row-cols-md-2 mt-5 ">
                         {
-                            jobList?.map(job => <JobShow job={job}></JobShow>)
+                            jobList?.slice(pagesVisited, pagesVisited + jobsPerPage)
+                            .map((job) => <JobShow job={job}></JobShow>)
                         }
                     </div>
-                }
-                {
-                    (state == false) &&
-                    <div className="row row-cols-1 row-cols-sm-2 mt-5 ">
-                        {
-                            searchValue?.map(job => <JobShow job={job}></JobShow>)
-                        }
-                        {
-                            filterJob?.map(job => <JobShow job={job}></JobShow>)
-                        }
-                    </div>
-                }
+                <ReactPaginate
+                    previousLabel={"Previous"}
+                    nextLabel={"Next"}
+                    pageCount={pageCount}
+                    onPageChange={changePage}
+                    containerClassName={"paginationBttns"}
+                    previousLinkClassName={"previousBttn"}
+                    nextLinkClassName={"nextBttn"}
+                    disabledClassName={"paginationDisabled"}
+                    activeClassName={"paginationActive"}
+                />
             </div>
         </>
     );

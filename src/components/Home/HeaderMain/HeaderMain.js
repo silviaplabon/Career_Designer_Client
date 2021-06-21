@@ -33,21 +33,21 @@ const HeaderMain = () => {
 
     return (
         <form onSubmit={handleSubmit(onSubmit)} className=" p-5 formStyle headerMainSection">
-            <div className="container ">
-                <div className=" w-75 m-auto searchHeader mt-5 " >
+            <div className="container headerContainer">
+                <div className=" w-75 m-auto searchHeader mt-5  headermainDiv" >
                     <div className="row  text-white " style={{borderRadius:'0.70rem'}}>
 
 
-                        <div className="col-md-4 jobTitleHeader">
+                        <div className="col-md-4 col-lg-4 jobTitleHeader">
 
                             <input name="title" id="jobTitle" className="form-control " placeholder="Job Title" defaultValue="" ref={register} />
                         </div>
-                        <div className="col-md-3 locationHeader">
+                        <div className="col-md-3 col-lg-3 locationHeader">
 
                             <input name="location" id="jobLocation" className="form-control " placeholder="location" defaultValue="" ref={register} />
                         </div>
 
-                        <div className="col-md-3 categoryHeader">
+                        <div className="col-md-3 col-lg-3 categoryHeader">
 
                             <select ref={register} name="category" className="form-select " style={{ color: 'black' }} >
                                 <option value="IT Engineer">IT Engineer</option>
@@ -60,8 +60,8 @@ const HeaderMain = () => {
                                 <option value="Design & Art">Design & Art</option>
                             </select>
                         </div>
-                        <div className="col-md-2 ">
-                            <input type="submit" className="mt-3 btn btn-success" className="form-control" value="Save" />
+                        <div className="col-md-2 col-lg-2 text-center ">
+                            <input type="submit" className="mt-3 btn btn-success text-center" className="form-control" style={{backgroundColor:'orange'}} value="Search" />
                         </div>
                     </div>
 

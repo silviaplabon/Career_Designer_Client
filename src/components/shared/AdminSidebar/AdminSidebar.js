@@ -22,7 +22,7 @@ const AdminSidebar = () => {
                     <Link to="/candidator" className=" nav-link text-white">Candidator</Link>
                 </li>
                 <li>
-                    <Link to="/pendingjob" className="nav-link text-white " style={{ backgroundColor: 'orange', borderRadius: '0.70rem' }}>Pending Job</Link>
+                    <Link to="/pendingajob" className="nav-link text-white " style={{ backgroundColor: 'orange', borderRadius: '0.70rem' }}>Pending Job</Link>
                 </li>
                 <li>
                     <Link to="/admin_maker" className="nav-link text-white " style={{ backgroundColor: 'orange', borderRadius: '0.70rem' }}>Admin Maker</Link>

@@ -10,3 +10,14 @@
     background-image: url('https://i.ibb.co/cNPgg0m/background-Image.jpg');
 
 }
+
+@media only screen and (min-device-width: 992px) and (max-device-width:2000px) {
+    .cardJob{
+        width:46%;
+        margin:2%
+    }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width:991px) {
+
+}
