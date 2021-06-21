@@ -10,7 +10,8 @@ const SeekerAccount = () => {
     const [profileData,setProfileData]=useState([])
 
     useEffect(() => {
-        fetch('http://localhost:4200/seeker_is_available?email=' + loggedInUser?.email,
+        fetch('https://rocky-basin-25437.herokuapp.com/seeker_is_available?email=' + loggedInUser?.email,
+        
             {
                 method: 'GET',
                 headers: {

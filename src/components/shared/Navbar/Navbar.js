@@ -13,10 +13,13 @@ const Navbar = () => {
   const [loggedInUser, setLoggedInUser] = useContext(UserContext);
   console.log(loggedInUser)
     return (
+     
+ 
       <div className="" style={{backgroundColor:'#0A1215'}}>
+
         <nav className="navbar navbar-expand-sm navbar-light   navbarDesign container pt-5">
           <div className="container-fluid ">
-            <h1 className="navbar-brand h2HeaderColor fw-bold text-white" href="#">SILVIA</h1>
+            <h1 className="navbar-brand h2HeaderColor fw-bold text-white" href="#">Career Designer</h1>
             <button className="navbar-toggler text-white" style={{backgroundColor:'#eaf2f5'}} type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
               <span className="navbar-toggler-icon " ></span>
             </button>
@@ -36,7 +39,8 @@ const Navbar = () => {
             </div>
           </div>
         </nav>
-        </div>
+        </div> 
+          
     );
 };
 

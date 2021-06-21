@@ -13,7 +13,7 @@ const FeatureJobs = () => {
     const [filterJob, setFilterJob] = useState([]);
     const [searchAndFilter,setSearchAndFilter]=useState([]);
     const [pageNumber, setPageNumber] = useState(0);
-    const jobsPerPage = 25;
+    const jobsPerPage = 20;
     const pagesVisited = pageNumber * jobsPerPage;
     let value;
 

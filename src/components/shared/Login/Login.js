@@ -6,6 +6,8 @@ import { facebookSignIn, googleSignIn, inititliazeLoginFramework, signOut, signI
 import { useForm } from 'react-hook-form';
 import './Login.css'
 import { UserContext } from '../../../App';
+import Navbar from '../Navbar/Navbar';
+
 
 const Login = () => {
   const [loggedInUser, setLoggedInUser] = useContext(UserContext);
@@ -117,6 +119,9 @@ const Login = () => {
   }
 
   return (
+    <div className="">
+      <Navbar></Navbar>
+ 
     <div className="containerColor">
       {!user.isSignedIn &&
         <div className="row container  rowLogin w-50 m-auto d-flex justify-content-center align-items-center flex-column">
@@ -177,7 +182,8 @@ const Login = () => {
           </div>
         </div>
       }
-    </div>
+    </div> 
+      </div>
   );
 };
 

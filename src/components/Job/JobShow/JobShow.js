@@ -4,8 +4,30 @@ import CategoryImageShow from '../CategoryImageShow/CategoryImageShow';
 import './JobShow.css'
 
 const JobShow = ({ job }) => {
-  const { category, type, title, location, deadline, status,_id } = job;
+  const { category, type, title, location, deadline, status, _id } = job;
   const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+
+  const ApplyForAJob = (emai, job) => {
+    const jobData = {
+      email:emai,
+      ...job
+  };
+  
+    fetch('https://rocky-basin-25437.herokuapp.com/ApplyForAJob', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(jobData)
+    })
+      .then(res => res.json())
+      .then(data => {
+        if (data) {
+          alert('welcome')
+        }
+      })
+  }
+
 
   return (
     <>  {
@@ -20,7 +42,7 @@ const JobShow = ({ job }) => {
               <p className="card-text">{location}</p>
               <div className="d-flex justify-content-start">
                 <button className="btn btn-primary btnFont me-1">{type}</button>
-                <button className="btn btn-danger btnFont">Apply Now</button>
+                <button className="btn btn-danger btnFont" onClick={() => ApplyForAJob(loggedInUser.email, job)}>Apply Now</button>
               </div>
             </div>
           </div>

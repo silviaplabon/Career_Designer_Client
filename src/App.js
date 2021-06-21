@@ -44,7 +44,6 @@ function App() {
             <PrivateRoute exact path='/admin_maker'>
               <AdminMaker></AdminMaker>
             </PrivateRoute>
-
             <PrivateRoute exact path='/candidator'>
               <Candidate></Candidate>
             </PrivateRoute>
@@ -56,9 +55,9 @@ function App() {
             <PrivateRoute exact path='/postajob'>
               <EmployerAccount></EmployerAccount>
             </PrivateRoute>
-            <Route exact path='/user'>
+            <PrivateRoute exact path='/user'>
               <UserSidebar></UserSidebar>
-            </Route>
+            </PrivateRoute>
            
             <PrivateRoute exact path='/jobApplierProfile'>
               <SeekerAccount></SeekerAccount>
