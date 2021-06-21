@@ -10,6 +10,7 @@ import { faCcMastercard, faPaypal, faCcPaypal } from '@fortawesome/free-brands-s
 import { noAuto } from '@fortawesome/fontawesome-svg-core';
 import './EmployerAccountCreate.css';
 import EmployerAccount from './EmployerAccount';
+import Navbar from '../../shared/Navbar/Navbar';
 
 
 
