@@ -1,13 +1,11 @@
 import React from 'react';
 
-const BrowseJobs = () => {
-    
+const DecisionMakerJob = () => {
     return (
         <div>
-
             
         </div>
     );
 };
 
-export default BrowseJobs;
+export default DecisionMakerJob;

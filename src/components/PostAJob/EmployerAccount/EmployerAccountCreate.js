@@ -16,21 +16,12 @@ import EmployerAccount from './EmployerAccount';
 const EmployerAccountCreate = ({ modalIsOpen, closeModal }) => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const { register, handleSubmit, watch, errors } = useForm();
-
     const { displayName, email } = loggedInUser;
-
-    const [state, setState] = useState(null);
-
     const [radio, setRadio] = useState('Credit Card');
-
     const [serviceType, setServiceType] = useState('Basic');
-
     const handleRadio = e => {
         setRadio(e.target.value);
     }
-
-    console.log(loggedInUser)
-
     const handleServiceRadio = e => {
         setServiceType(e.target.value);
     }

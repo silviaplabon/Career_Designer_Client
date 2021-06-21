@@ -1,0 +1,26 @@
+.sidebar{
+    background-color:#2d524a;
+    height:100vh!important;
+}
+.sidebar li{
+    margin-bottom: 2em;
+}
+.sidebar li:hover span{
+    display: inline-block;
+    transform: translate(5px);
+}
+.sidebar svg{
+    margin-right: 5px;
+}
+@media only screen and (min-device-width: 768px) and (max-device-width:2000px) {
+    .sidebar{
+        position:fixed!important;
+    }
+}
+
+@media only screen and (min-device-width: 200px) and (max-device-width:767px) {
+    .sidebar{
+        height:30rem!important;
+        
+    }
+}

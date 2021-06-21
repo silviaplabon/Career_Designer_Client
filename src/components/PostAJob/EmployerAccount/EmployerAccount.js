@@ -26,7 +26,6 @@ const EmployerAccount = () => {
             .then(data => {
                 if (data.length > 0) {
                     setState(true)
-                    alert(data)
                 }
                 else {
                     setState(false)
@@ -44,7 +43,6 @@ const EmployerAccount = () => {
                     state ==false &&
 
                     <div className="col-6">
-
                         <EmployerAccountCreate></EmployerAccountCreate>
                     </div>
                 }

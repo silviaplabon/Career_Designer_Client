@@ -19,19 +19,17 @@ const Navbar = () => {
             <button className="navbar-toggler text-white" style={{backgroundColor:'#eaf2f5'}} type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
               <span className="navbar-toggler-icon " ></span>
             </button>
-            <div className="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
+            <div className="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
               <div className="navbar-nav text-white">
                 <Link to="/" className="nav-link text-white">Home</Link>
-                <Link to="/about"  className=" nav-link text-white">About</Link>
-                <Link to="/userIsAdmin" className="nav-link text-white">Admin</Link>
-                <Link to="/contact" className="nav-link text-white">Contact</Link>
-                <Link to="/postajob" className="nav-link text-white " style={{marginLeft:'150px'}}>Post A Job</Link>
+                <Link to="/browsejob"  className=" nav-link text-white">Job</Link>
+                {/* <Link to="/admin_maker" className="nav-link text-white">Admin</Link>
+                <Link to="/contact" className="nav-link text-white">Contact</Link> */}
+                <Link to="/postajob" className="nav-link text-white " style={{backgroundColor:'orange',borderRadius:'0.70rem'}}>Post A Job</Link>
   
-                            {(loggedInUser.email) ? <button onClick={()=>setLoggedInUser({})} className="btn buttonColor   buttonStyleHeader  fw-bold mb-1  " style={{ color: 'white' }}>Logout</button> :
-                                <Link to="/login" className="btn   buttonStyleHeader buttonColor fw-bold">Login</Link>
+                            {(loggedInUser.email) ? <button onClick={()=>setLoggedInUser({})} className="btn text-white  buttonStyleHeader   fw-bold mb-1  " style={{ color: 'white' }}>Logout</button> :
+                                <Link to="/login" className="btn   text-white buttonStyleHeader buttonColor fw-bold">Login</Link>
                             }
-
-                <Link to="/postjob" className="nav-link text-white ms-5">Register</Link>
               </div>
             </div>
           </div>
