@@ -14,7 +14,7 @@ const PendingJobShow = (props) => {
     // {
     // (loggedInUser.admin == true && loggedInUser.role == "Administrator") &&
 
-    fetch(` https://rocky-basin-25437.herokuapp.com/ /statusUpdate/job/${_id}`, {
+    fetch(` https://rocky-basin-25437.herokuapp.com/statusUpdate/job/${_id}`, {
       method: 'PATCH',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(bookDetails)

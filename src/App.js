@@ -18,6 +18,7 @@ import UserSidebar from './components/shared/UserSidebar/UserSidebar';
 import JobApplier from './components/Job/JobApplier/JobApplier';
 import Candidate from './components/Admin/Candidate/Candidate';
 import PendingJob from './components/Admin/PendingJob/PendingJob';
+import SeekerAccount from './components/Job/SeekerAccount/SeekerAccount';
 
 
 export const UserContext = createContext();
@@ -58,8 +59,9 @@ function App() {
             <Route exact path='/user'>
               <UserSidebar></UserSidebar>
             </Route>
-            <PrivateRoute exact path='/jobApplier'>
-              <JobApplier></JobApplier>
+           
+            <PrivateRoute exact path='/jobApplierProfile'>
+              <SeekerAccount></SeekerAccount>
             </PrivateRoute>
           </Switch>
         </Router>

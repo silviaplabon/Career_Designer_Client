@@ -33,7 +33,7 @@ const HeaderMain = () => {
 
     return (
         <form onSubmit={handleSubmit(onSubmit)} className=" p-5 formStyle headerMainSection">
-            <div className="container headerContainer">
+            <div className="container headerContainer pb-2">
                 <div className=" w-75 m-auto searchHeader mt-5  headermainDiv" >
                     <div className="row  text-white " style={{borderRadius:'0.70rem'}}>
 

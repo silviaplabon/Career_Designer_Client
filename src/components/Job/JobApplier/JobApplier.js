@@ -37,10 +37,6 @@ const JobApplier = () => {
             })
     }
 
-
-
-
-
     return (
         <div className="">
             <Navbar></Navbar>

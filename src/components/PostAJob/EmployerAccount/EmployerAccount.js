@@ -38,7 +38,7 @@ const EmployerAccount = () => {
     }, [loggedInUser.email])
 
     useEffect(() => {
-        fetch(' https://rocky-basin-25437.herokuapp.com/ /lengthOfEmployerJob?email='+loggedInUser?.email,
+        fetch('https://rocky-basin-25437.herokuapp.com/lengthOfEmployerJob?email='+loggedInUser?.email,
             {
                 method: 'GET',
                 headers: {
@@ -61,9 +61,7 @@ const EmployerAccount = () => {
                 {
                     state ==false &&
 
-                    <div className="col-6">
                         <EmployerAccountCreate></EmployerAccountCreate>
-                    </div>
                 }
 
             </div>

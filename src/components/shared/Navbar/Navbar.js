@@ -26,7 +26,7 @@ const Navbar = () => {
                 {/* <Link to="/browsejob"  className=" nav-link text-white">Job</Link> */}
                 
                 {loggedInUser.admin==true && <Link to="/candidator" className="nav-link text-white">Admin</Link>}
-                <Link to="/jobApplier" className="nav-link text-white">Applier Profile</Link>
+                <Link to="/jobApplierProfile" className="nav-link text-white">Profile</Link>
                 <Link to="/postajob" className="nav-link text-white " style={{backgroundColor:'orange',borderRadius:'0.70rem'}}>Post A Job</Link>
   
                             {(loggedInUser.email) ? <button onClick={()=>setLoggedInUser({})} className="btn text-white  buttonStyleHeader   fw-bold mb-1  " style={{ color: 'white' }}>Logout</button> :

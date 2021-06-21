@@ -6,7 +6,7 @@ import PendingJobShow from '../PendingJobShow/PendingJobShow';
 const PendingJob = () => {
     const [pendingJob, setPendingJob] = useState([]);
     useEffect(() => {
-        fetch(' https://rocky-basin-25437.herokuapp.com/ /pending_job_show')
+        fetch(' https://rocky-basin-25437.herokuapp.com/pending_job_show')
             .then(res => res.json())
             .then(data => {
                 setPendingJob(data.reverse());
