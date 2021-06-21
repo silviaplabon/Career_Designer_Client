@@ -56,8 +56,8 @@ const EmployerAccountCreate = ({ modalIsOpen, closeModal }) => {
         <div className="">
             <Navbar></Navbar>
     
-        <div className="container w-100">
-                <div className="row ">
+        <div className="container w-100 mt-5" style={{backgroundColor:'rgba(255, 255, 254, 0.14)'}} >
+                <div className="row">
                     <h5 className="text-center w-100">Dear {loggedInUser.displayName}</h5>
                     <h6 className="text-center">Please Enter Your Card Information:</h6>
                     <div className=" mb-2 mt-5 w-100 row ">

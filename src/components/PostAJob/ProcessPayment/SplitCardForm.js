@@ -131,7 +131,7 @@ const SplitCardForm = ({handlePayment}) => {
         />
       </label>
       <br/>
-      <button type="submit" className="btn btn-lg btn-primary mt-2 ms-2" disabled={!stripe}>
+      <button type="submit" className="btn btn-lg  mt-2 ms-2" style={{backgroundColor:'orange'}} disabled={!stripe}>
         Pay
       </button>
     </form>

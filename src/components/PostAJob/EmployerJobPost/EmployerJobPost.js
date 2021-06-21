@@ -58,13 +58,6 @@ const EmployerJobPost = (props) => {
         }
     }, [props])
 
-
-
-
-
-
-
-
     return (
         <div className="">
             <Navbar></Navbar>

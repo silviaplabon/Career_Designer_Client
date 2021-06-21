@@ -42,7 +42,7 @@ const JobShow = ({ job }) => {
               <p className="card-text">{location}</p>
               <div className="d-flex justify-content-start">
                 <button className="btn btn-primary btnFont me-1">{type}</button>
-                <button className="btn btn-danger btnFont" onClick={() => ApplyForAJob(loggedInUser.email, job)}>Apply Now</button>
+                <button className="btn btn-danger btnFont" onClick={() => ApplyForAJob(loggedInUser?.email, job)}>Apply Now</button>
               </div>
             </div>
           </div>

@@ -4,7 +4,7 @@ import AddMessage from '../AddMessage/AddMessage';
 import './Footer.css'
 const Footer = () => {
     return (
-        <div className="" style={{ backgroundColor: '#2d524a' }}>
+        <div className="" style={{ backgroundColor: '#212529' }}>
             <div className="container">
                 <div className="row pt-5 mt-3 text-white rowStyle">
                     <div className="col-md-3  col-sm-3 col-xs-6 col1Style">
