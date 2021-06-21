@@ -16,6 +16,7 @@ import UserIsAdmin from './components/shared/UserIsAdmin/UserIsAdmin';
 import FeatureJobs from './components/Job/FeatureJobs/FeatureJobs';
 import UserSidebar from './components/shared/UserSidebar/UserSidebar';
 
+
 export const UserContext = createContext();
 export const SearchContext = createContext();
 
@@ -40,9 +41,6 @@ function App() {
             </Route>
             <Route exact path='/userIsAdmin'>
               <UserIsAdmin></UserIsAdmin>
-            </Route>
-            <Route exact path='/featureJobCollection'>
-              <FeatureJobs state={false}></FeatureJobs>
             </Route>
             <Route exact path='/postajob'>
               <EmployerAccount></EmployerAccount>

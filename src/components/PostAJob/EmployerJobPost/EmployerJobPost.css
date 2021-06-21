@@ -1,0 +1,12 @@
+
+input::placeholder {
+    color: black!important;
+    opacity: 0.80!important; 
+  }
+  input::submit{
+      color:black;
+  }
+  textarea::placeholder{
+    color: black!important;
+    opacity: 0.80!important; 
+  }

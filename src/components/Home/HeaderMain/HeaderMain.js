@@ -22,26 +22,21 @@ const HeaderMain = () => {
             jobData.category&& searchByJobData(jobData);
         }
     }
-   
     const searchByJobData = (jobData) => {
         fetch(`http://localhost:4200/searchJobData/${jobData.category}/${jobData.title}/${jobData.location}`)
             .then(res => res.json())
             .then(data => {
                 setSearchValue(data);
-                history.push('/featureJobCollection')
             })
     }
 
-console.log(jobList);
-    
-
-
 
     return (
-        <form onSubmit={handleSubmit(onSubmit)} className="bg-light p-5 formStyle">
-            <div className="container bg-transparent">
-                <div className=" w-75 m-auto searchHeader mt-5" >
-                    <div className="row  text-white ">
+        <form onSubmit={handleSubmit(onSubmit)} className=" p-5 formStyle headerMainSection">
+            <div className="container ">
+                <div className=" w-75 m-auto searchHeader mt-5 " >
+                    <div className="row  text-white " style={{borderRadius:'0.70rem'}}>
+
 
                         <div className="col-md-4 jobTitleHeader">
 
@@ -54,7 +49,7 @@ console.log(jobList);
 
                         <div className="col-md-3 categoryHeader">
 
-                            <select ref={register} name="category" style={{ color: 'black', height: '40px' }} >
+                            <select ref={register} name="category" className="form-select " style={{ color: 'black' }} >
                                 <option value="IT Engineer">IT Engineer</option>
                                 <option value="Management">Management</option>
                                 <option value="Digital & Creative">Digital &Creative</option>

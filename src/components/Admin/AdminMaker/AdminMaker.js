@@ -26,7 +26,7 @@ const AdminMaker = () => {
 
 
   return (
-    <div className="container ">
+    <div className="container "  style={{backgroundColor:'#212529'}}>
       <div className="row">
         <div className="col-md-8 justify-content-center align-items-center">
 

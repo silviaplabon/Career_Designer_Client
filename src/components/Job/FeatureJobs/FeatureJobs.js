@@ -1,13 +1,15 @@
 import React, { useContext, useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 import { SearchContext, UserContext } from '../../../App';
 import JobShow from '../JobShow/JobShow';
+const FeatureJobs = ({state}) => {
 
-const FeatureJobs = ({ state }) => {
     const [searchValue, setSearchValue] = useContext(SearchContext);
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const [jobList, setJobList] = useState([])
     const [filterJob, setFilterJob] = useState([])
     let value;
+
 
     useEffect(() => {
         fetch(' http://localhost:4200/allJobList')
@@ -40,7 +42,7 @@ const FeatureJobs = ({ state }) => {
                     </div>
                 }
                 {
-                    (state == false && filterJob.length>0) &&
+                    (state == false) &&
                     <div className="row row-cols-1 row-cols-sm-2 mt-5 ">
                         {
                             searchValue?.map(job => <JobShow job={job}></JobShow>)

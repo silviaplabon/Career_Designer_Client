@@ -12,7 +12,7 @@ import { UserContext } from '../../../App';
 const Navbar = () => {
   const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     return (
-      <div className="" style={{backgroundColor:'red'}}>
+      <div className="" style={{backgroundColor:'#0A1215'}}>
         <nav className="navbar navbar-expand-sm navbar-light   navbarDesign container pt-5">
           <div className="container-fluid ">
             <h1 className="navbar-brand h2HeaderColor fw-bold text-white" href="#">SILVIA</h1>
